@@ -6,7 +6,7 @@ module Jackknife
     Jackknife.leaveoneout(estimator::Function, x)
 
 Estimate the parameter `estimator(x)` for each subsample of `x`, systematically
-omitting each index one at a time. The result is a vector of length `length(x)`
+omitting each index one at a time. The result is a vector of length `length(x)-1`
 of parameter estimates.
 """
 function leaveoneout{T<:Real}(estimator::Function, x::AbstractVector{T})
