@@ -1,5 +1,7 @@
 # Jackknife.jl
 
+[![0.4](http://pkg.julialang.org/badges/Jackknife_0.4.svg)](http://pkg.julialang.org/?pkg=Jackknife)
+[![0.5](http://pkg.julialang.org/badges/Jackknife_0.5.svg)](http://pkg.julialang.org/?pkg=Jackknife)
 [![Travis](https://travis-ci.org/ararslan/Jackknife.jl.svg?branch=master)](https://travis-ci.org/ararslan/Jackknife.jl)
 [![Coveralls](https://coveralls.io/repos/github/ararslan/Jackknife.jl/badge.svg?branch=master)](https://coveralls.io/github/ararslan/Jackknife.jl?branch=master)
 
