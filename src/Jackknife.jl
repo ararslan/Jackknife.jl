@@ -1,4 +1,4 @@
-VERSION >= v"0.4.0" && __precompile__()
+__precompile__()
 
 module Jackknife
 
@@ -10,17 +10,9 @@ omitting each index one at a time. The result is a vector of length `length(x)-1
 of parameter estimates.
 """
 function leaveoneout{T<:Real}(estimator::Function, x::AbstractVector{T})
-    n = length(x)
-    n > 1 || throw(ArgumentError("The sample must have size > 1"))
-
-    S = typeof(estimator(x[1]))
-    θ = Array{S}(n)
-
-    @inbounds for i = 1:n
-        θ[i] = estimator(vcat(x[1:i-1], x[i+1:end]))
-    end
-
-    return θ
+    length(x) > 1 || throw(ArgumentError("The sample must have size > 1"))
+    inds = eachindex(x)
+    return [estimator(x[filter(j -> j != i, inds)]) for i in inds]
 end
 
 
