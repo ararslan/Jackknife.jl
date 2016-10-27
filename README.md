@@ -1,7 +1,7 @@
 # Jackknife.jl
 
-[![0.4](http://pkg.julialang.org/badges/Jackknife_0.4.svg)](http://pkg.julialang.org/?pkg=Jackknife)
 [![0.5](http://pkg.julialang.org/badges/Jackknife_0.5.svg)](http://pkg.julialang.org/?pkg=Jackknife)
+[![0.6](http://pkg.julialang.org/badges/Jackknife_0.6.svg)](http://pkg.julialang.org/?pkg=Jackknife)
 [![Travis](https://travis-ci.org/ararslan/Jackknife.jl.svg?branch=master)](https://travis-ci.org/ararslan/Jackknife.jl)
 [![Coveralls](https://coveralls.io/repos/github/ararslan/Jackknife.jl/badge.svg?branch=master)](https://coveralls.io/github/ararslan/Jackknife.jl?branch=master)
 
@@ -18,7 +18,7 @@ Each function takes the following two arguments:
  * A point estimator, given as a `Function`.
    The function must return a scalar when passed a vector.
 
- * A real-valued data vector of length > 1.
+ * A real-valued vector of length > 1.
 
 ### Resampling
 
