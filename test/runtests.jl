@@ -1,9 +1,11 @@
 using Jackknife
-using Base.Test
+using Test
+using Statistics
 
-import Jackknife: bias, estimate, leaveoneout, variance
+using Jackknife: bias, estimate, leaveoneout, variance, Reducer
 
 @test bias(mean, 1:10) == 0.0
+@test bias(Reducer(mean), 1:10) == 0.0
 @test estimate(mean, 1:10) == mean(1:10)
 @test_throws ArgumentError leaveoneout(mean, Int[])
 @test_throws ArgumentError leaveoneout(mean, [1])
@@ -13,3 +15,4 @@ import Jackknife: bias, estimate, leaveoneout, variance
 @test variance(sum, 1:10) == 74.25
 @test leaveoneout(sum, 1:10) == collect(54:-1:45)
 
+@test_throws TypeError Reducer(x->"hi")(1)
