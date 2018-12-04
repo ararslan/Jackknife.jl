@@ -7,10 +7,9 @@ task:
     - pkg install -y curl
     - mkdir -p ~/julia
     - curl -s -L --retry 7 "https://julialang-s3.julialang.org/bin/freebsd/x64/${JULIA_VERSION}/julia-${JULIA_VERSION}-latest-freebsd-x86_64.tar.gz" | tar -C ~/julia -x -z --strip-components=1 -f -
-    - export PATH="${PATH}:${HOME}/julia/bin"
-    - julia --color=yes -e "VERSION >= v\"0.7.0-DEV.3630\" && using InteractiveUtils; versioninfo()"
+    - ~/julia/bin/julia --color=yes -e "VERSION >= v\"0.7.0-DEV.3630\" && using InteractiveUtils; versioninfo()"
   build_script:
-    - julia --color=yes -e "using Pkg; Pkg.add(PackageSpec(name=\"Jackknife\", path=pwd()))"
-    - julia --color=yes -e "using Pkg; Pkg.build(\"Jackknife\")"
+    - ~/julia/bin/julia --color=yes -e "using Pkg; Pkg.add(PackageSpec(name=\"Jackknife\", path=pwd()))"
+    - ~/julia/bin/julia --color=yes -e "using Pkg; Pkg.build(\"Jackknife\")"
   test_script:
-    - julia --color=yes -e "using Pkg; Pkg.test(\"Jackknife\")"
+    - ~/julia/bin/julia --color=yes -e "using Pkg; Pkg.test(\"Jackknife\")"
