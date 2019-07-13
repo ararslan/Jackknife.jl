@@ -1,23 +1,27 @@
 # Documentation: http://docs.travis-ci.com/user/languages/julia/
 language: julia
-os: linux
 matrix:
   include:
     - julia: 1.0
+      os: linux
       arch: x64
     - julia: 1.1
+      os: linus
       arch: x64
     - julia: 1.2
+      os: linux
       arch: x64
     - julia: nightly
+      os: linux
       arch: x64
     - julia: 1.0
+      os: linux
       arch: arm64
     - julia: 1.1
+      os: linux
       arch: arm64
     - julia: 1.2
-      arch: arm64
-    - julia: nightly
+      os: linux
       arch: arm64
 notifications:
   email: false
