@@ -19,6 +19,8 @@ matrix:
       arch: arm64
     - os: windows
       arch: arm64
+    - julia: nightly
+      arch: arm64
 notifications:
   email: false
 after_success:
