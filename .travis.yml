@@ -3,10 +3,22 @@ os:
   - linux
   - osx
   - windows
+arch:
+  - x64
+  - x86
+  - arm64
 julia:
   - 1.0
-  - 1.1
+  - 1.2
   - nightly
+matrix:
+  exclude:
+    - os: osx
+      arch: x86
+    - os: osx
+      arch: arm64
+    - os: windows
+      arch: arm64
 notifications:
   email: false
 after_success:
