@@ -6,6 +6,19 @@
 This package provides [jackknife](https://en.wikipedia.org/wiki/Jackknife_resampling)
 resampling and estimation functions for Julia.
 
+## Installation
+
+This package is registered in the General registry and can be installed from the Julia
+REPL with
+
+```julia
+julia> using Pkg
+
+julia> Pkg.add("Jackknife")
+```
+
+or in the Pkg REPL mode with `]add Jackknife`.
+
 ## Functions
 
 None of the functions here are exported, so you'll have to call them with the prefix
