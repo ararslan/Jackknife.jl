@@ -1,7 +1,7 @@
 # Jackknife.jl
 
-[![Travis](https://travis-ci.org/ararslan/Jackknife.jl.svg?branch=master)](https://travis-ci.org/ararslan/Jackknife.jl)
-[![Coveralls](https://coveralls.io/repos/github/ararslan/Jackknife.jl/badge.svg?branch=master)](https://coveralls.io/github/ararslan/Jackknife.jl?branch=master)
+[![CI](https://github.com/ararslan/Jackknife.jl/workflows/CI/badge.svg)](https://github.com/ararslan/Jackknife.jl/actions?query=workflow%3ACI+branch%3Amaster)
+[![Codecov](http://codecov.io/github/ararslan/Jackknife.jl/coverage.svg?branch=master)](http://codecov.io/github/ararslan/Jackknife.jl?branch=master)
 
 This package provides [jackknife](https://en.wikipedia.org/wiki/Jackknife_resampling)
 resampling and estimation functions for Julia.
